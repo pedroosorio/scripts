@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Initializing ROS rosserial_arduino coms bridge ..."
+rosrun rosserial_python serial_node.py

@@ -1,0 +1,2 @@
+rosrun minho_team_tools minho_teleop -r $1 &
+view $1

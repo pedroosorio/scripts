@@ -1,0 +1,3 @@
+#!/bin/bash
+sshpass -p lar ssh lar@172.16.49.5
+

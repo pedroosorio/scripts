@@ -1,0 +1,8 @@
+#!/bin/bash
+str=$(hostname -I)
+
+if [[ $str != "" ]]; then
+    echo $(hostname -I | cut -d' ' -f1)
+else 
+    echo $(hostname -i)
+fi

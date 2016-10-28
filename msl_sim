@@ -1,0 +1,25 @@
+#!/bin/bash
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+trap ctrl_c INT
+function ctrl_c(){
+   echo -e "${RED} Closing ROS and Gazebo ... ${NC}"
+   pkill -f roscore &&
+   pkill -f gzserver &&
+   sleep 2 &&
+   kill -9 $$
+}
+
+echo -e "${RED}Killing Existing processes ... ${NC}"
+pkill -f roscore
+pkill -f gzserver
+sleep 2
+
+echo -e "${RED}Ktarting ROS ...${NC}"
+sh -c "roscore" &
+sleep 2 
+echo -e "${RED}Starting Gazebo Simulation ...${NC}"
+rosrun gazebo_ros gzserver --verbose msl.world &
+mtSim &
+cat

@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "<img>$HOME/bin/app.png</img>"
+BASE_IP="172.16.49."
+OUT=""
+TEMP=""
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+
+for ID in 1 2 3 4 5
+do
+ ROBOT_IP="$BASE_IP$ID"
+
+ if timeout 0.3s ping_robot $ROBOT_IP; then
+  temp="ROBOT $ID -> ${GREEN}ON${NC} \n"
+  OUT=$OUT$temp
+ else
+  temp="ROBOT $ID -> ${RED}OFF${NC} \n"
+  OUT=$OUT$temp
+ fi
+done
+
+echo -e "<tool>$OUT</tool>"

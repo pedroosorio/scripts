@@ -1,0 +1,10 @@
+current_directory=${PWD}
+cd $current_directory
+
+if [ -z "$1" ]; then 
+	echo "You should write a commit comment! git push failed!"
+else 
+	git add .
+	git commit -am "$1"
+	git push origin master && git push lar master
+fi

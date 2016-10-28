@@ -1,0 +1,1 @@
+rosrun minho_team_tools visualizer -r $1

@@ -1,0 +1,11 @@
+if [ "$1" = "start" ]; then 
+    echo "Starting XAMPP"
+    sudo /opt/lampp/lampp start
+elif [ "$1" = "stop" ]; then 
+    echo "Stopping XAMPP"
+    sudo /opt/lampp/lampp stop
+else 
+    echo "XAMPP Arguments:"
+    echo " -> start : Starts XAMPP services"
+    echo " -> stop  : Stops XAMPP services"
+fi
