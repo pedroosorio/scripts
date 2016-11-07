@@ -2,7 +2,7 @@
 str=$(hostname -I)
 
 if [[ $str != "" ]]; then
-   if [[ ${#str} > 12 ]]; then
+   if [[ ${#str} > 15 ]]; then
       echo $(hostname -I | cut -d' ' -f2)
    else 
       echo $(hostname -I | cut -d' ' -f1)
