@@ -1,8 +1,0 @@
-#!/bin/bash
-pkill -f ros & pkill -f gz
-cd ~/catkin_ws
-catkin_make &&
-roscore &&
-rosrun gazebo_ros gazebo &&
-rosrun minho_team_tools minho_teleop -s 1 
-

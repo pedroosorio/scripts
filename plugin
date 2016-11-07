@@ -1,4 +1,0 @@
-#!/bin/bash
-echo "<img>$HOME/bin/app.png</img>"
-
-echo "<tool>check_robots</tool>"

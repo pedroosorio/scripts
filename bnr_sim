@@ -1,4 +1,0 @@
-#!/bin/bash
-gazebo --verbose bnr.world &&
-pkill -f gz
-pkill -f gazebo
