@@ -6,5 +6,5 @@ if [ -z "$1" ]; then
 else 
 	git add .
 	git commit -am "$1"
-	git push origin master && git push lar master
+	git push origin master && git push mine master
 fi

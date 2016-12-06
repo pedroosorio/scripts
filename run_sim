@@ -1,0 +1,9 @@
+pkill -f gzserver
+a="-b"
+if [ "$1" == "$a" ]; then
+rosrun gazebo_ros gzserver msl.world &
+rosrun minho_team_tools mini_basestation
+else
+rosrun gazebo_ros gzserver msl.world &
+rosrun minho_team_tools visualizer -s $1
+fi
